@@ -1,0 +1,16 @@
+# extensions
+*.pyc
+*.log
+
+# files
+.DS_Store
+secrets.json
+robots.txt
+.htaccess
+
+# directories
+venv
+static/
+exports/
+
+# allow
