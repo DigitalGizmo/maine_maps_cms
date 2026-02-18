@@ -1,9 +1,11 @@
 # extensions
 *.pyc
 *.log
+*.sqlite3
 
 # files
 .DS_Store
+.env
 secrets.json
 robots.txt
 .htaccess
