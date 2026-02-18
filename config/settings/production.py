@@ -6,7 +6,7 @@ from .base import *  # noqa: F403
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['dev.digitalgizmo.com']
+ALLOWED_HOSTS = ['maine-maps-cms.digitalgizmo.com']
 
 CORS_ALLOWED_ORIGINS = [
     # Add your production frontend origin here, e.g.:

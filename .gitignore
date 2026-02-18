@@ -4,6 +4,7 @@
 *.sqlite3
 
 # files
+db.sqlite3
 .DS_Store
 .env
 secrets.json
