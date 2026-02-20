@@ -1,0 +1,8 @@
+[Unit]
+Description=gunicorn maine-maps-cms socket
+
+[Socket]
+ListenStream=/run/maine-maps-cms.gunicorn.sock
+
+[Install]
+WantedBy=sockets.target

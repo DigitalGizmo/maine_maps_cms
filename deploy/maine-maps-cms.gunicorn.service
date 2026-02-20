@@ -1,0 +1,18 @@
+[Unit]
+Description=gunicorn maine-maps-cms daemon
+Requires=maine-maps-cms.gunicorn.socket
+After=network.target
+
+[Service]
+User=donaldo
+Group=www-data
+WorkingDirectory=/var/www/maine-maps-cms.digitalgizmo.com
+Environment="DJANGO_SETTINGS_MODULE=config.settings.production"
+ExecStart=/var/www/maine-maps-cms.digitalgizmo.com/venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/maine-maps-cms.gunicorn.sock \
+          config.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
