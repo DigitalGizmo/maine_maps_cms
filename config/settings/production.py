@@ -10,6 +10,7 @@ ALLOWED_HOSTS = ['maine-maps-cms.digitalgizmo.com']
 
 CORS_ALLOWED_ORIGINS = [
     'https://dev.digitalgizmo.com',
+    'http://localhost:5173',
 ]
 
 # Security
