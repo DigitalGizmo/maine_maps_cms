@@ -2,9 +2,25 @@ from django.db import models
 
 
 class MapSet(models.Model):
+    ORIENTATION_CHOICES = [
+        ('vertical', 'Vertical'),
+        ('horizontal', 'Horizontal'),
+    ]
+
     slug = models.SlugField(unique=True)
     title = models.CharField(max_length=200)
     short_description = models.CharField(max_length=500, blank=True)
+    map_orientation = models.CharField(
+        max_length=20,
+        choices=ORIENTATION_CHOICES,
+        default='vertical',
+        help_text='Portrait layout: vertical maps set height; horizontal maps fill width'
+    )
+    aspect_ratio = models.CharField(
+        max_length=20,
+        default='3/5',
+        help_text='CSS aspect-ratio value, e.g. "3/5" or "4/3"'
+    )
 
     class Meta:
         ordering = ['title']

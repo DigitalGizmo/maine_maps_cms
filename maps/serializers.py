@@ -17,4 +17,4 @@ class MapSetSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MapSet
-        fields = ['id', 'slug', 'title', 'short_description', 'views']
+        fields = ['id', 'slug', 'title', 'short_description', 'map_orientation', 'aspect_ratio', 'views']

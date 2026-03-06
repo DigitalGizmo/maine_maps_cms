@@ -4,8 +4,9 @@ from .models import MapSet, MapView
 
 @admin.register(MapSet)
 class MapSetAdmin(admin.ModelAdmin):
-    list_display = ['title', 'slug']
+    list_display = ['title', 'slug', 'map_orientation', 'aspect_ratio']
     prepopulated_fields = {'slug': ('title',)}
+    fields = ['title', 'slug', 'short_description', 'map_orientation', 'aspect_ratio']
 
 
 @admin.register(MapView)
