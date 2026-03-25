@@ -13,7 +13,7 @@ robots.txt
 
 # directories
 venv
-static/
+/static/
 exports/
 
 # allow
