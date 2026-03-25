@@ -108,6 +108,6 @@ SUMMERNOTE_CONFIG = {
             ['view', ['codeview']],
         ],
         'styleTags': [],
-        'height': 200,
+        'height': 300,
     },
 }
