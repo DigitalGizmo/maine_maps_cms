@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from .models import MapSet, MapView
 
 
@@ -10,7 +11,8 @@ class MapSetAdmin(admin.ModelAdmin):
 
 
 @admin.register(MapView)
-class MapViewAdmin(admin.ModelAdmin):
+class MapViewAdmin(SummernoteModelAdmin):
+    summernote_fields = ('interpretive_text',)
     list_display = ['caption', 'mapset', 'ordinal', 'filename', 'is_crop']
     list_filter = ['mapset']
     fields = [

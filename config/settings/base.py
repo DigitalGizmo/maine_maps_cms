@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'django_summernote',
     'maps',
 ]
 
@@ -90,3 +91,23 @@ USE_TZ = True
 # Static files
 
 STATIC_URL = 'static/'
+
+# Summernote
+
+SUMMERNOTE_THEME = 'lite'
+
+SUMMERNOTE_CONFIG = {
+    'default_css': (
+        'summernote/summernote-lite.min.css',
+        'summernote/django_summernote.css',
+    ),
+    'summernote': {
+        'toolbar': [
+            ['style', ['bold', 'italic']],
+            ['para', ['ul', 'ol']],
+            ['view', ['codeview']],
+        ],
+        'styleTags': [],
+        'height': 200,
+    },
+}
