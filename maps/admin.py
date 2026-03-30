@@ -14,10 +14,10 @@ class MapSetAdmin(admin.ModelAdmin):
 @admin.register(MapView)
 class MapViewAdmin(SummernoteModelAdmin):
     summernote_fields = ('interpretive_text',)
-    list_display = ['caption', 'mapset', 'ordinal', 'filename', 'is_crop']
+    list_display = ['title', 'mapset', 'ordinal', 'filename', 'is_crop']
     list_filter = ['mapset']
     fields = [
-        'mapset', 'ordinal', 'filename', 'caption', 'title', 'interpretive_text',
+        'mapset', 'ordinal', 'filename', 'title', 'interpretive_text',
         'is_crop', 'crop_x', 'crop_y', 'crop_width', 'crop_height',
         'image_width', 'image_height',
     ]

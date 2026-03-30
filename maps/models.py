@@ -25,7 +25,7 @@ class MapSet(models.Model):
     )
 
     class Meta:
-        ordering = ['title']
+        ordering = ['slug']
 
     def __str__(self):
         return self.title
