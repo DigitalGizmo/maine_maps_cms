@@ -6,7 +6,7 @@ class MapViewSerializer(serializers.ModelSerializer):
     class Meta:
         model = MapView
         fields = [
-            'id', 'ordinal', 'filename', 'caption', 'interpretive_text',
+            'id', 'ordinal', 'filename', 'title', 'caption', 'interpretive_text',
             'is_crop', 'crop_x', 'crop_y', 'crop_width', 'crop_height',
             'image_width', 'image_height',
         ]
@@ -17,4 +17,4 @@ class MapSetSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MapSet
-        fields = ['id', 'slug', 'title', 'short_description', 'map_orientation', 'aspect_ratio', 'views']
+        fields = ['id', 'slug', 'title', 'short_title', 'date', 'short_description', 'map_orientation', 'aspect_ratio', 'views']

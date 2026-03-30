@@ -9,6 +9,8 @@ class MapSet(models.Model):
 
     slug = models.SlugField(unique=True)
     title = models.CharField(max_length=200)
+    short_title = models.CharField(max_length=100, blank=True)
+    date = models.CharField(max_length=12, blank=True)
     short_description = models.CharField(max_length=500, blank=True)
     map_orientation = models.CharField(
         max_length=20,
@@ -40,6 +42,7 @@ class MapView(models.Model):
         max_length=200,
         help_text='Base filename for tiles, e.g. 1700_3_1798'
     )
+    title = models.CharField(max_length=200, blank=True)
     caption = models.CharField(max_length=500, blank=True)
     interpretive_text = models.TextField(
         blank=True,
