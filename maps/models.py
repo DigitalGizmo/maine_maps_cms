@@ -23,6 +23,10 @@ class MapSet(models.Model):
         default='3/5',
         help_text='CSS aspect-ratio value, e.g. "3/5" or "4/3"'
     )
+    credit = models.TextField(
+        blank=True,
+        help_text='HTML credit/attribution text (Summernote)'
+    )
 
     class Meta:
         ordering = ['slug']

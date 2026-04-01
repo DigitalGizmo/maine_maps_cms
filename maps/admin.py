@@ -18,6 +18,7 @@ class MapViewAdmin(SummernoteModelAdmin):
     list_filter = ['mapset']
     fields = [
         'mapset', 'ordinal', 'filename', 'title', 'interpretive_text',
-        'is_crop', 'crop_x', 'crop_y', 'crop_width', 'crop_height',
         'image_width', 'image_height',
+        'is_crop', 'crop_x', 'crop_y', 'crop_width', 'crop_height',
+        
     ]
