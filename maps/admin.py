@@ -4,11 +4,12 @@ from .models import MapSet, MapView
 
 
 @admin.register(MapSet)
-class MapSetAdmin(admin.ModelAdmin):
+class MapSetAdmin(SummernoteModelAdmin):
+    summernote_fields = ('credit',)
     list_display = ['title', 'slug','map_orientation', 'aspect_ratio']
     prepopulated_fields = {'slug': ('title',)}
-    fields = ['title', 'short_title', 'slug', 'date', 'short_description', 
-              'map_orientation', 'aspect_ratio']
+    fields = ['title', 'short_title', 'slug', 'date', 'short_description',
+              'map_orientation', 'aspect_ratio', 'credit']
 
 
 @admin.register(MapView)
