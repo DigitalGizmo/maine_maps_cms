@@ -25,7 +25,7 @@ class MapSet(models.Model):
     )
     credit = models.TextField(
         blank=True,
-        help_text='HTML credit/attribution text (Summernote)'
+        help_text='shift + enter for plain line return'
     )
 
     class Meta:
