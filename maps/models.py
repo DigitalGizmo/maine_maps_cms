@@ -32,7 +32,7 @@ class MapSet(models.Model):
         ordering = ['slug']
 
     def __str__(self):
-        return self.title
+        return self.slug + ": " + self.title
 
 
 class MapView(models.Model):
@@ -40,6 +40,7 @@ class MapView(models.Model):
         MapSet, on_delete=models.CASCADE, related_name='views'
     )
     ordinal = models.PositiveIntegerField(
+        verbose_name='View Number',
         help_text='1 = default full view, 2+ = detail/variation views'
     )
     filename = models.CharField(
